@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UiApp.MainPage" BackgroundColor="#EFF1F5">
+
+    <NavigationPage.TitleView>
+        <Grid Margin="0,15,20,20" BackgroundColor="#EFF1F5" HorizontalOptions="Fill" VerticalOptions="Fill">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="0"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="dot.png"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                   Grid.Column="1" Grid.Row="0"/>
+        </Grid>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <Grid Margin="20,0,15,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="15"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Company" Grid.Column="0" Grid.Row="0" FontSize="30" FontFamily="Roboto-Bold.ttf"/>
+            <Label Margin="0,0,50,0" Text="We are a company" Grid.Row="1" Grid.Column="0" FontFamily="Roboto-Light.ttf" 
+                   HorizontalOptions="CenterAndExpand" FontSize="9" VerticalOptions="CenterAndExpand"/>
+            <Frame Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" CornerRadius="5"
+                   BackgroundColor="#EFF1F5" BorderColor="#EFF1F5" ScaleX="0.6" ScaleY="0.6" >
+                <Button ImageSource="company.png" VerticalOptions="Fill" 
+                        HorizontalOptions="Fill"></Button>
+            </Frame>
+            <Label Margin="3,15,0,0" Text="Choose Your Power" FontSize="15" Grid.Column="0" Grid.Row="2"
+                   HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontFamily="Roboto-Medium.ttf"/>
+            <Grid Margin="30,15,0,0"  Grid.Row="3" Grid.Column="0" ColumnSpacing="100">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Frame Margin="0,0,0,0" ScaleX="2.5" ScaleY="2" HorizontalOptions="EndAndExpand" 
+                       VerticalOptions="FillAndExpand" CornerRadius="5" BackgroundColor="#EFF1F5"
+                       BorderColor="#EFF1F5">
+                    <ImageButton Source="my.png" ScaleX="4.6" ScaleY="4.9" Clicked="ImageButton_Clicked" CornerRadius="1"></ImageButton>
+                </Frame>
+                <Frame Margin="0,0,0,0" ScaleX="2.5" ScaleY="2" HorizontalOptions="EndAndExpand" 
+                       VerticalOptions="FillAndExpand" CornerRadius="5" BackgroundColor="#EFF1F5"
+                       BorderColor="#EFF1F5" Grid.Column="1" >
+                    <ImageButton Source="cla.png" ScaleX="4.9" ScaleY="5.1" CornerRadius="1"></ImageButton>
+                </Frame>
+            </Grid>
+            <Grid Margin="30,0,0,0"  Grid.Row="4" Grid.Column="0" ColumnSpacing="100">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Frame Margin="0,0,0,0" ScaleX="2.5" ScaleY="2" HorizontalOptions="EndAndExpand" 
+                       VerticalOptions="FillAndExpand" CornerRadius="5" BackgroundColor="#EFF1F5"
+                       BorderColor="#EFF1F5">
+                    <ImageButton Source="q.png" ScaleX="5.1" ScaleY="4.9" CornerRadius="1"></ImageButton>
+                </Frame>
+                <Frame Margin="0,0,0,0" ScaleX="2.5" ScaleY="2" HorizontalOptions="EndAndExpand" 
+                       VerticalOptions="FillAndExpand" CornerRadius="5" BackgroundColor="#EFF1F5"
+                       BorderColor="#EFF1F5" Grid.Column="1" >
+                    <ImageButton Source="m.png" ScaleX="5.2" ScaleY="4.9" CornerRadius="1"></ImageButton>
+                </Frame>
+            </Grid>
+            <Frame Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="5" BackgroundColor="#EFF1F5"
+                   BorderColor="#EFF1F5" Margin="15,10,15,10" CornerRadius="5">
+                <ImageButton Source="ass.png" BackgroundColor="#EFF1F5" ScaleX="1.1" ScaleY="1.5"></ImageButton>
+            </Frame>
+            <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" ColumnSpacing="20" Margin="2" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+                <Frame BackgroundColor="#EFF1F5" BorderColor="#EFF1F5" Margin="20,0,0,0" CornerRadius="5">
+                    <ImageButton Source="su.png" BackgroundColor="#EFF1F5" ScaleX="1.9" ScaleY="2.5" ></ImageButton>
+                </Frame>
+                <Frame Grid.Column="1" BackgroundColor="#EFF1F5" BorderColor="#EFF1F5" CornerRadius="5">
+                    <ImageButton Source="doc.png" BackgroundColor="#EFF1F5" ScaleX="1.9" ScaleY="2.4" ></ImageButton>
+                </Frame>
+                <Frame Grid.Column="2" BackgroundColor="#EFF1F5" BorderColor="#EFF1F5" CornerRadius="5">
+                    <ImageButton Source="p.png" BackgroundColor="#EFF1F5" ScaleX="1.9" ScaleY="2.5"></ImageButton>
+                </Frame>
+
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:UiApp"
+             x:Class="UiApp.MyPolicy" NavigationPage.HasBackButton="False" BackgroundColor="#EFF1F5">
+    <NavigationPage.TitleView>
+        <Grid Margin="0,15,20,20" BackgroundColor="#EFF1F5" HorizontalOptions="Fill" VerticalOptions="Fill">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="0"/>
+            </Grid.ColumnDefinitions>
+            <ImageButton Source="ar" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Start" ScaleY="1"
+                         Clicked="ImageButton_Clicked_2"></ImageButton>
+            <Image Source="dot.png"  HorizontalOptions="End" VerticalOptions="End"
+                   Grid.Column="1" />
+        </Grid>
+    </NavigationPage.TitleView>
+    <ContentPage.BindingContext>
+        <local:ModelView/>
+    </ContentPage.BindingContext>
+    <Grid Margin="20,0,0,0" BackgroundColor="#EFF1F5" Padding="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Label Text="My Policies" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" FontSize="25"/>
+        <ListView Grid.Row="1" ItemsSource="{Binding Policies}" HasUnevenRows="True" ItemTapped="ListView_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Frame BorderColor="#EFF1f5" CornerRadius="5" BackgroundColor="#EFF1F5" HorizontalOptions="Fill"
+                                   VerticalOptions="Fill">
+                                <Grid ColumnSpacing="0" RowSpacing="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="10"/>
+                                        <RowDefinition Height="15"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="2.5*"/>
+                                        <ColumnDefinition Width="1*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding Image}" Grid.RowSpan="2" Grid.Column="0" VerticalOptions="Center"></Image>
+                                    <Label Text="{Binding Title}" Grid.RowSpan="2" VerticalOptions="Center" FontSize="15" Grid.Column="1" ></Label>
+                                    <Image Source="{Binding Img}" Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="2" ></Image>
+                                </Grid>
+                            </Frame>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100*"/>
+                                    <ColumnDefinition Width="20"/>
+                                </Grid.ColumnDefinitions>
+                                <Label  Text="{Binding SubItem1}" IsVisible="{Binding IsVisible}" Grid.Row="0" VerticalOptions="Fill"></Label>
+                                <Image Source="{Binding arrow}" IsVisible="{Binding IsVisible}" Grid.Row="0" Grid.Column="1" VerticalOptions="End"/>
+                                <Label Text="{Binding SubItem2}" IsVisible="{Binding IsVisible}" Grid.Row="1" Grid.Column="0" />
+                                <Image Source="{Binding arrow}" IsVisible="{Binding IsVisible}" Grid.Row="1" Grid.Column="1" VerticalOptions="End"/>
+                                <Label Text="{Binding SubItem3}" IsVisible="{Binding IsVisible}" Grid.Row="2" Grid.Column="0"></Label>
+                                <Image Source="{Binding arrow}" IsVisible="{Binding IsVisible}" Grid.Row="2" Grid.Column="1" VerticalOptions="End"/>
+                                <Label Text="{Binding SubItem4}" IsVisible="{Binding IsVisible}" Grid.Row="3" Grid.Column="0"></Label>
+                                <Image Source="{Binding arrow}" IsVisible="{Binding IsVisible}" Grid.Row="3" Grid.Column="1" VerticalOptions="End"/>
+                                <Label Text="{Binding SubItem5}" IsVisible="{Binding IsVisible}" Grid.Row="4" Grid.Column="0"></Label>
+                                <Image Source="{Binding arrow}" IsVisible="{Binding IsVisible}" Grid.Row="4" Grid.Column="1" VerticalOptions="End"/>
+                                <Label Text="{Binding SubItem6}" IsVisible="{Binding IsVisible}" Grid.Row="5" Grid.Column="0"></Label>
+                                <Image Source="{Binding arrow}" IsVisible="{Binding IsVisible}" Grid.Row="5" Grid.Column="1" VerticalOptions="End"/>
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>
